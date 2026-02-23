@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  --bg: #0a0f1f;
+  --panel: #111b38;
+  --track: #1e2d57;
+  --accent: #4ee6ff;
+  --danger: #ff4f7a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 20% 20%, #182f66, var(--bg));
+  color: #e9f3ff;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.app {
+  width: min(980px, 95vw);
+  background: color-mix(in oklab, var(--panel) 92%, black);
+  border: 1px solid #2e4d92;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+}
+
+.hint {
+  margin: 0 0 0.75rem;
+  color: #b9d2ff;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg, #19306e, #101f48 60%, #0d1736);
+  border: 1px solid #3f65be;
+  border-radius: 10px;
+}
+
+.hud {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.05rem;
+}
+
+#restart {
+  margin-top: 0.8rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: #001123;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#restart:hover {
+  filter: brightness(1.08);
+}
